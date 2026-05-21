@@ -50,9 +50,56 @@ body {
   }
 }
 
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 #logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-quote-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeInQuote 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1.2s; /* Fade in after logo loads */
+  padding: 10px 20px;
+  max-width: 600px;
+}
+
+.splash-quote-title {
+  font-size: 32px;
+  font-family: "Google Sans Bold";
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.splash-quote-text {
+  font-size: 18px;
+  font-family: "Google Sans Italic";
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+}
+
+@keyframes fadeInQuote {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

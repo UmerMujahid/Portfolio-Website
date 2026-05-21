@@ -4,7 +4,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import FeelingProud from "./FeelingProud";
+import DeveloperWorkspace from "./DeveloperWorkspace";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -38,18 +38,10 @@ export default function Greeting(props) {
                   className="portfolio-repo-btn"
                 />
               </div>
-              {/* <div className="button-greeting-div">
-              <Button text="Contact me" href="#contact" />
-              <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
-            </div> */}
             </div>
           </div>
           <div className="greeting-image-div">
-            {/* <img
-							alt="saad sitting on table"
-							src={require("../../assets/images/feelingProud.svg")}
-						></img> */}
-            <FeelingProud theme={theme} />
+            <DeveloperWorkspace theme={theme} />
           </div>
         </div>
       </div>

@@ -40,3 +40,48 @@
     flex-direction: column;
   }
 }
+
+.github-cards-div {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.github-cards-header {
+  font-size: 30px;
+  font-family: "Google Sans Bold";
+  margin-bottom: 25px;
+}
+
+.github-cards-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.github-card-item {
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.github-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.github-card-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .github-cards-header {
+    font-size: 24px;
+  }
+}

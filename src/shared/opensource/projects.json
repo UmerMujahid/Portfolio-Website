@@ -1,21 +1,49 @@
 {
   "data": [
     {
-      "id": "R_kgDOJWL0-g",
-      "name": "mdp-diffusion",
-      "createdAt": "2023-04-13T04:18:19Z",
-      "url": "https://github.com/ashutosh1919/mdp-diffusion",
-      "description": "Text-guided image editing by manipulating diffusion path without any training.",
+      "id": "R_kgDOQlhuYg",
+      "name": "NLP-Project-Clinical-Inheritance-Patterns",
+      "createdAt": "2025-12-09T14:06:39Z",
+      "url": "https://github.com/UmerMujahid/NLP-Project-Clinical-Inheritance-Patterns",
+      "description": "An NLP framework for extracting family medical history and inferring hereditary disease risk from unstructured clinical text using Transformers (BioBERT), Deep Learning, and ML",
       "isFork": false,
       "languages": [
         {
           "name": "Python",
           "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOSVq_FA",
+      "name": "Blood-Trace",
+      "createdAt": "2026-05-06T08:15:17Z",
+      "url": "https://github.com/UmerMujahid/Blood-Trace",
+      "description": "This is a specialized health-tech platform / service typically used for blood donation through a visual map-based interface enabling live location, real time data updates and simplified UI.",
+      "isFork": true,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
         },
         {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
         },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOSdidfQ",
+      "name": "AI-Models-Semester-Project",
+      "createdAt": "2026-05-14T15:39:47Z",
+      "url": "https://github.com/UmerMujahid/AI-Models-Semester-Project",
+      "description": "6th Semester Project involving training CNN 2D, Bi-LSTM models form scratch and Fine-Tuning MobileNetV2 model for classification and regression purposes.",
+      "isFork": false,
+      "languages": [
         {
           "name": "Jupyter Notebook",
           "iconifyClass": "logos-jupyter"
@@ -23,27 +51,17 @@
       ]
     },
     {
-      "id": "R_kgDOG_vYHA",
-      "name": "explainable-cnn",
-      "createdAt": "2022-03-13T20:41:33Z",
-      "url": "https://github.com/ashutosh1919/explainable-cnn",
-      "description": "📦 PyTorch based visualization package for generating layer-wise explanations for CNNs.",
+      "id": "R_kgDOQjYTbA",
+      "name": "HireX-AI-Recruitment-System",
+      "createdAt": "2025-12-05T20:00:07Z",
+      "url": "https://github.com/UmerMujahid/HireX-AI-Recruitment-System",
+      "description": "HIREX is an advanced recruitment management solution enabled with automated parsing and intelligent candidate matching.",
       "isFork": false,
       "languages": [
         {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
-      "name": "masterPortfolio",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "url": "https://github.com/ashutosh1919/masterPortfolio",
-      "description": "🔥 The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer.",
-      "isFork": false,
-      "languages": [
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
         {
           "name": "HTML",
           "iconifyClass": "logos-html-5"
@@ -51,25 +69,21 @@
         {
           "name": "CSS",
           "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "Dockerfile",
-          "iconifyClass": "simple-icons:docker"
         }
       ]
     },
     {
-      "id": "R_kgDOG0_8uQ",
-      "name": "react-awesome-shapes",
-      "createdAt": "2022-02-11T14:50:20Z",
-      "url": "https://github.com/ashutosh1919/react-awesome-shapes",
-      "description": "🌀 Insert Awesome Shapes into Your React Site with Ease.",
+      "id": "R_kgDOSG6YDg",
+      "name": "Email-Analyzer",
+      "createdAt": "2026-04-19T16:11:41Z",
+      "url": "https://github.com/UmerMujahid/Email-Analyzer",
+      "description": "An intelligent tool that securely scans your inbox to automatically identify, rank, and summarize valuable opportunities like job offers and sponsorships.",
       "isFork": false,
       "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
         {
           "name": "HTML",
           "iconifyClass": "logos-html-5"
@@ -77,38 +91,16 @@
         {
           "name": "CSS",
           "iconifyClass": "logos-css-3"
-        },
-        {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
-        },
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
         }
       ]
     },
     {
-      "id": "R_kgDOGcPKSQ",
-      "name": "neuro-symbolic-sudoku-solver",
-      "createdAt": "2021-11-26T17:56:07Z",
-      "url": "https://github.com/ashutosh1919/neuro-symbolic-sudoku-solver",
-      "description": "⚙️ Solving sudoku using Deep Reinforcement learning in combination with powerful symbolic representations.",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkzMjU5NDM1MTE=",
-      "name": "react-liquidswipe",
-      "createdAt": "2021-01-01T08:31:51Z",
-      "url": "https://github.com/ashutosh1919/react-liquidswipe",
-      "description": "🚀 Smooth Liquid Swipe Animation to transition between different components.",
-      "isFork": false,
+      "id": "R_kgDOSVp8tg",
+      "name": "Shopping-Mall-Managment-System",
+      "createdAt": "2026-05-06T07:54:41Z",
+      "url": "https://github.com/UmerMujahid/Shopping-Mall-Managment-System",
+      "description": "Shopping mall owners can manage finances, employees, and shops, subscriptions through this management system.",
+      "isFork": true,
       "languages": [
         {
           "name": "JavaScript",
@@ -117,6 +109,10 @@
         {
           "name": "CSS",
           "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
         }
       ]
     }

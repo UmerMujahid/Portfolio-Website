@@ -10,6 +10,7 @@ import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import ResumePage from "../pages/resume/Resume.js";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 export default class Main extends Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ export default class Main extends Component {
   render() {
     return (
       <BrowserRouter basename="/">
+        <ScrollToTop />
         <Switch>
           <Route
             path="/"
@@ -73,20 +75,15 @@ export default class Main extends Component {
             render={(props) => <Contact {...props} theme={this.props.theme} />}
           />
 
-          {settings.isSplash && (
-            <Route
-              path="/splash"
-              render={(props) => <Splash {...props} theme={this.props.theme} />}
-            />
-          )}
-
           <Route
             path="/projects"
             render={(props) => <Projects {...props} theme={this.props.theme} />}
           />
           <Route
             path="/resume"
-            render={(props) => <ResumePage {...props} theme={this.props.theme} />}
+            render={(props) => (
+              <ResumePage {...props} theme={this.props.theme} />
+            )}
           />
           <Route
             path="*"

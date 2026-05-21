@@ -16,7 +16,13 @@ class ExperienceCard extends Component {
         <Fade left duration={2000} distance="40px">
           <div className="experience-card-logo-div">
             <img
-              className="experience-card-logo"
+              className={`experience-card-logo ${
+                experience["logo_path"] === "ijt.png" ||
+                experience["logo_path"] === "ecom.png" ||
+                experience["logo_path"] === "mern1.png"
+                  ? "contain"
+                  : ""
+              }`}
               src={require(`../../assets/images/${experience["logo_path"]}`)}
               alt=""
             />

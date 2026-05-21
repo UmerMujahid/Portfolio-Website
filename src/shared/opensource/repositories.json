@@ -1,0 +1,231 @@
+{
+  "data": [
+    {
+      "id": "R_kgDOSfQg3Q",
+      "name": "Github-Dev-Card-Generator",
+      "createdAt": "2026-05-16T14:00:37Z",
+      "url": "https://github.com/UmerMujahid/Github-Dev-Card-Generator",
+      "description": null,
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Dockerfile"
+          },
+          {
+            "name": "Python"
+          },
+          {
+            "name": "HTML"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSdidfQ",
+      "name": "AI-Models-Semester-Project",
+      "createdAt": "2026-05-14T15:39:47Z",
+      "url": "https://github.com/UmerMujahid/AI-Models-Semester-Project",
+      "description": "6th Semester Project involving training CNN 2D, Bi-LSTM models form scratch and Fine-Tuning MobileNetV2 model for classification and regression purposes.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Jupyter Notebook"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSVq_FA",
+      "name": "Blood-Trace",
+      "createdAt": "2026-05-06T08:15:17Z",
+      "url": "https://github.com/UmerMujahid/Blood-Trace",
+      "description": "This is a specialized health-tech platform / service typically used for blood donation through a visual map-based interface enabling live location, real time data updates and simplified UI.",
+      "isFork": true,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "HTML"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSO_5vQ",
+      "name": "UmerMujahid",
+      "createdAt": "2026-04-28T14:58:13Z",
+      "url": "https://github.com/UmerMujahid/UmerMujahid",
+      "description": null,
+      "isFork": false,
+      "languages": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "R_kgDOSDJyQQ",
+      "name": "Blood-Trace-UI-UX-Design",
+      "createdAt": "2026-04-15T08:14:20Z",
+      "url": "https://github.com/UmerMujahid/Blood-Trace-UI-UX-Design",
+      "description": "A UI/UX focused Blood Donor Visual System. Made keeping in mind user requirements, and Nielsen's AHCI components.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "CSS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOQjYTbA",
+      "name": "HireX-AI-Recruitment-System",
+      "createdAt": "2025-12-05T20:00:07Z",
+      "url": "https://github.com/UmerMujahid/HireX-AI-Recruitment-System",
+      "description": "HIREX is an advanced recruitment management solution enabled with automated parsing and intelligent candidate matching.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "CSS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSG6YDg",
+      "name": "Email-Analyzer",
+      "createdAt": "2026-04-19T16:11:41Z",
+      "url": "https://github.com/UmerMujahid/Email-Analyzer",
+      "description": "An intelligent tool that securely scans your inbox to automatically identify, rank, and summarize valuable opportunities like job offers and sponsorships.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "CSS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDORg3Seg",
+      "name": "Nexora-Company",
+      "createdAt": "2026-03-07T14:37:02Z",
+      "url": "https://github.com/UmerMujahid/Nexora-Company",
+      "description": "A website of a technology and consulting firm that focuses on digital transformation, software development, and providing innovative IT solutions for various business sectors.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "TypeScript"
+          },
+          {
+            "name": "Mermaid"
+          },
+          {
+            "name": "CSS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDORJHgQA",
+      "name": "Resume-Website",
+      "createdAt": "2026-02-05T08:45:53Z",
+      "url": "https://github.com/UmerMujahid/Resume-Website",
+      "description": "Personal CV website using HTML and CSS",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "HTML"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOQlhuYg",
+      "name": "NLP-Project-Clinical-Inheritance-Patterns",
+      "createdAt": "2025-12-09T14:06:39Z",
+      "url": "https://github.com/UmerMujahid/NLP-Project-Clinical-Inheritance-Patterns",
+      "description": "An NLP framework for extracting family medical history and inferring hereditary disease risk from unstructured clinical text using Transformers (BioBERT), Deep Learning, and ML",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Python"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSV5PXw",
+      "name": "Flappy-Bird-in-x86-Assembly",
+      "createdAt": "2026-05-06T12:54:58Z",
+      "url": "https://github.com/UmerMujahid/Flappy-Bird-in-x86-Assembly",
+      "description": "Flappy Bird in 8086 Assembly using Mode 13h, with real-time input, collision detection, and multitasking-based background sound.",
+      "isFork": true,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Assembly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSVp8tg",
+      "name": "Shopping-Mall-Managment-System",
+      "createdAt": "2026-05-06T07:54:41Z",
+      "url": "https://github.com/UmerMujahid/Shopping-Mall-Managment-System",
+      "description": "Shopping mall owners can manage finances, employees, and shops, subscriptions through this management system.",
+      "isFork": true,
+      "languages": {
+        "nodes": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "TSQL"
+          }
+        ]
+      }
+    }
+  ]
+}

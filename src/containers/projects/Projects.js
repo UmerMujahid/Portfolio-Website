@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ApolloClient from "apollo-boost";
 import { gql } from "apollo-boost";
 import "./Project.css";
@@ -7,14 +7,10 @@ import Button from "../../components/button/Button";
 import { openSource } from "../../portfolio";
 import { greeting } from "../../portfolio.js";
 
-export default function Projects() {
+export default function Projects({ theme }) {
   const [repo, setrepo] = useState([]);
 
-  useEffect(() => {
-    getRepoData();
-  }, []);
-
-  function getRepoData() {
+  const getRepoData = useCallback(() => {
     const client = new ApolloClient({
       uri: "https://api.github.com/graphql",
       request: (operation) => {
@@ -60,7 +56,11 @@ export default function Projects() {
         setrepoFunction(result.data.repositoryOwner.pinnedRepositories.edges);
         console.log(result);
       });
-  }
+  }, []);
+
+  useEffect(() => {
+    getRepoData();
+  }, [getRepoData]);
 
   function setrepoFunction(array) {
     setrepo(array);
@@ -71,7 +71,7 @@ export default function Projects() {
       <h1 className="project-title">Open Source Projects</h1>
       <div className="repo-cards-div-main">
         {repo.map((v, i) => {
-          return <GithubRepoCard repo={v} key={v.node.id} />;
+          return <GithubRepoCard repo={v} key={v.node.id} theme={theme} />;
         })}
       </div>
       <Button
@@ -79,6 +79,7 @@ export default function Projects() {
         className="project-button"
         href={greeting.githubProfile}
         newTab={true}
+        theme={theme}
       />
     </div>
   );

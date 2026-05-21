@@ -28,22 +28,22 @@ export default function GithubRepoCard({ repo, theme }) {
               ></path>
             </svg>
             <p className="repo-name" style={{ color: theme.text }}>
-              {repo.name}
+              {repo.name || repo.node?.name || repo.node?.nameWithOwner}
             </p>
           </div>
           <p className="repo-description" style={{ color: theme.text }}>
-            {repo.description}
+            {repo.description || repo.node?.description}
           </p>
           <div className="repo-details">
             <p
               className="repo-creation-date subTitle"
               style={{ color: theme.secondaryText }}
             >
-              Created on {repo.createdAt.split("T")[0]}
+              Created on {repo.createdAt ? repo.createdAt.split("T")[0] : ""}
             </p>
             <ProjectLanguages
               className="repo-languages"
-              logos={repo.languages}
+              logos={repo.languages || []}
             />
           </div>
           {/* <div className="repo-stats">

@@ -1,0 +1,146 @@
+.repo-list-container {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.repo-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 10px;
+}
+
+.repo-list-title {
+  font-family: "Google Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.repo-count {
+  font-family: "Google Sans", sans-serif;
+  font-size: 14px;
+}
+
+.repo-scroll-div {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 6px 10px 6px 6px;
+}
+
+/* Custom Sleek Scrollbar */
+.repo-scroll-div::-webkit-scrollbar {
+  width: 6px;
+}
+
+.repo-scroll-div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.repo-scroll-div::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 10px;
+}
+
+.repo-scroll-div::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+.repo-card-link {
+  text-decoration: none !important;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.repo-card {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.repo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: #3b82f6 !important;
+}
+
+.repo-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.repo-name-div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repo-svg {
+  flex-shrink: 0;
+}
+
+.repo-name {
+  font-family: "Google Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  word-break: break-word;
+}
+
+.repo-date {
+  font-family: "Google Sans", sans-serif;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.repo-description {
+  font-family: "Google Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-languages {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.repo-lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Google Sans", sans-serif;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.lang-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}

@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import ExperienceAccordion from "../../containers/experienceAccordion/ExperienceAccordion.js";
+import ArrowNavigation from "../../components/arrowNavigation/ArrowNavigation";
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Fade } from "react-reveal";
@@ -184,6 +185,11 @@ class Experience extends Component {
           </Fade>
         </div>
         <ExperienceAccordion sections={experience["sections"]} theme={theme} />
+        <ArrowNavigation
+          theme={theme}
+          nextPage="/projects"
+          nextText="Projects"
+        />
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

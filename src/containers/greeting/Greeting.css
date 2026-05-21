@@ -2,13 +2,13 @@
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 .greet-main {
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .gretting-main {
@@ -31,7 +31,7 @@
 }
 
 .greeting-text {
-  margin-top: 80px;
+  margin-top: 20px;
   font-size: 70px;
   line-height: 1.1;
   font-family: "Google Sans Bold";

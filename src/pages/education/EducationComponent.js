@@ -8,6 +8,7 @@ import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites
 import EducationImg from "./EducationImg";
 import { competitiveSites } from "../../portfolio";
 import { certifications } from "../../portfolio";
+import ArrowNavigation from "../../components/arrowNavigation/ArrowNavigation";
 import "./EducationComponent.css";
 import { Fade } from "react-reveal";
 
@@ -43,6 +44,11 @@ class Education extends Component {
             <Certifications theme={this.props.theme} />
           ) : null}
         </div>
+        <ArrowNavigation
+          theme={theme}
+          nextPage="/experience"
+          nextText="Experience"
+        />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
       </div>
