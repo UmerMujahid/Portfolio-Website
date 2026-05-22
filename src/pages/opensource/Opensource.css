@@ -67,6 +67,7 @@
     flex-direction: column;
     gap: 25px;
     width: 95%;
+    margin-bottom: 30px;
   }
 
   .opensource-left-col {
@@ -77,9 +78,37 @@
     width: 100%;
   }
 
+  /* Disable dual scrolling on tablet and mobile viewports for smooth page scrolling */
+  .opensource-left-col .repo-list-container {
+    height: auto !important;
+  }
+
+  .opensource-left-col .repo-scroll-div {
+    overflow-y: visible !important;
+    height: auto !important;
+    padding-right: 6px !important; /* Reset right padding for full flow */
+  }
+
   .opensource-right-col .top-languages-card {
     height: auto !important;
     min-height: auto !important;
     margin: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .opensource-dashboard-header {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .opensource-dashboard-title {
+    font-size: 24px;
+  }
+
+  .opensource-grid-container {
+    gap: 15px;
+    width: 92%;
+    margin-bottom: 20px;
   }
 }

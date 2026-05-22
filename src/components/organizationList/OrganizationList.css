@@ -41,10 +41,28 @@
   .dev-icons-orgs {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 30px;
   }
 
   .organizations-inline {
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizations-img {
+    width: 42px;
+  }
+
+  .dev-icons-orgs {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  .organizations-inline {
+    margin-right: 12px;
+    margin-bottom: 12px;
   }
 }
