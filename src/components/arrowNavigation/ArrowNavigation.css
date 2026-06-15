@@ -19,20 +19,35 @@
   justify-content: center;
   gap: 15px;
   padding: 14px 28px;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 0; /* Fully boxed */
+  background: transparent !important;
+  border: 1px solid var(--cyber-amber) !important;
+  box-shadow: var(--glow-amber-sm);
+  transition: var(--transition-normal);
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
 
+/* Yellow corner clip (arrow) */
+.arrow-nav-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, transparent 50%, var(--cyber-amber) 50%);
+  opacity: 1;
+}
+
 .arrow-nav-label {
-  font-family: "Google Sans Medium", sans-serif;
-  font-size: 1.1rem;
+  font-family: var(--font-mono) !important;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyber-amber) !important;
   transition: all 0.3s ease;
 }
 
@@ -48,14 +63,13 @@
 .arrow-nav-svg {
   width: 100%;
   height: 100%;
-  stroke: var(--text-color);
+  stroke: var(--cyber-amber) !important;
 }
 
-/* Hover & Interactive effects */
 .arrow-nav-content:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  filter: brightness(1.05);
+  transform: translateY(-2px);
+  background: rgba(255, 176, 0, 0.1) !important;
+  box-shadow: var(--glow-amber-md);
 }
 
 .arrow-nav-content:hover .arrow-nav-icon-wrapper {

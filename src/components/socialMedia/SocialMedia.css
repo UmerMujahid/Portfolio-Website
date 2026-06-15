@@ -1,70 +1,75 @@
+/* ============================================
+   SOCIAL MEDIA ICONS — GLASSMORPHIC CIRCLES
+   ============================================ */
+
 .social-media-div {
-  font-size: 2em;
+  font-size: 1.8em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
 }
 
-.icon-button i {
-  color: white;
-}
+/* Each icon button link */
 .icon-button {
-  margin-bottom: 10px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  /* Glassmorphic dark circle */
+  background: rgba(30, 33, 48, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 176, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 8px;
 }
 
 .icon-button i {
-  border-radius: 2.6rem;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.3rem;
-  height: 2.6rem;
-  line-height: 2.6rem;
-  margin: 0 5px;
-  position: relative;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 2.6rem;
-  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--cyber-text-muted);
+  transition: color 0.22s ease;
+  /* Reset background — no inherited dark backgrounds */
+  background: transparent !important;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  margin: 0;
 }
 
-/* .facebook i {
-  background-color: #3b5998;
+/* Hover — neon amber glow */
+.icon-button:hover {
+  background: rgba(255, 176, 0, 0.1);
+  border-color: rgba(255, 176, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 176, 0, 0.35);
+  transform: translateY(-4px) scale(1.08);
 }
 
-.linkedin i {
-  background-color: #0e76a8;
+.icon-button:hover i {
+  color: var(--cyber-amber);
 }
 
-.github i {
-  background-color: #333;
-}
-
-.gitlab i {
-  background-color: #fca326;
-}
-
-.google i {
-  background-color: #ea4335;
-}
-
-.twitter i {
-  background-color: #1da1f2;
-}
-
-.instagram i {
-  background-color: #E4405F;
-} */
-
-/*Hover Transition*/
-/* .twitter i:hover, .google i:hover, .gitlab i:hover,
-.github i:hover ,.linkedin i:hover ,.facebook i:hover, .instagram i:hover{
-  background-color: black;
-  transition: 0.3s ease-in;
-} */
-
-/* Media Query */
+/* ---- Media Query ---- */
 @media (max-width: 768px) {
   .social-media-div {
-    text-align: center;
+    justify-content: center;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-button i {
+    font-size: 1rem;
   }
 }

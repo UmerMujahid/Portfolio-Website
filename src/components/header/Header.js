@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
@@ -31,17 +30,21 @@ class Header extends Component {
   render() {
     const theme = this.props.theme;
     const isOnePage = this.props.isOnePage;
-    const link = "/";
+    const link = "/home";
 
     return (
-      <Fade top duration={1000} distance="20px">
+      <>
         <SeoHeader />
         <div
           style={{
             position: this.props.isHome ? "static" : "sticky",
             top: 0,
             zIndex: 1000,
-            backgroundColor: theme.body,
+            backgroundColor: "rgba(13, 14, 18, 0.88)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            borderBottom: "1px solid rgba(255, 176, 0, 0.18)",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.5)",
           }}
         >
           <header className="header">
@@ -246,7 +249,7 @@ class Header extends Component {
             </ul>
           </header>
         </div>
-      </Fade>
+      </>
     );
   }
 }

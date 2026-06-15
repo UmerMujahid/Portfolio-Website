@@ -10,6 +10,7 @@
 
 .projects-heading-div {
   display: flex;
+  margin-top: 60px; /* Space from navbar */
 }
 
 .projects-heading-div > * {
@@ -27,33 +28,37 @@
 }
 
 .projects-heading-img-div > * {
-  max-width: 100%;
+  max-width: 300px; /* Reduced to match Education and Experience pages */
+  width: 100%;
   height: auto;
 }
 
 .projects-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--cyber-amber);
   line-height: 1.1;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .projects-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
+  font-size: 14px;
+  font-family: var(--font-mono);
+  color: var(--cyber-cyan);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .projects-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 1.5;
   margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-family: var(--font-body);
+  color: var(--cyber-text-muted);
 }
 .publications-heading-text-div {
   text-align: center;

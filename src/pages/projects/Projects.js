@@ -5,7 +5,6 @@ import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import ArrowNavigation from "../../components/arrowNavigation/ArrowNavigation";
-import { Fade } from "react-reveal";
 import { greeting, projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
@@ -18,31 +17,29 @@ class Projects extends Component {
       <div className="projects-main">
         <Header theme={theme} />
         <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
-            <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
-                {/* <img
+          <div className="projects-heading-div">
+            <div className="projects-heading-img-div">
+              {/* <img
 											src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
 											alt=""
 										/> */}
-                <ProjectsImg theme={theme} />
-              </div>
-              <div className="projects-heading-text-div">
-                <h1
-                  className="projects-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {projectsHeader.title}
-                </h1>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {projectsHeader["description"]}
-                </p>
-              </div>
+              <ProjectsImg theme={theme} />
             </div>
-          </Fade>
+            <div className="projects-heading-text-div">
+              <h1
+                className="projects-heading-text"
+                style={{ color: theme.text }}
+              >
+                {projectsHeader.title}
+              </h1>
+              <p
+                className="projects-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {projectsHeader["description"]}
+              </p>
+            </div>
+          </div>
         </div>
         <div className="repo-cards-div-main">
           {ProjectsData.data.map((repo) => {

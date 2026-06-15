@@ -1,85 +1,133 @@
-/* header */
+/* ============================================
+   CYBER NAV / HEADER
+   ============================================ */
 
 .header {
   display: block;
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  max-width: 92%;
+  padding: 12px 16px;
+  margin: 0 auto;
+  position: relative;
 }
 
+/* Glassmorphic sticky wrapper (applied via inline style in Header.js) */
+/* adds backdrop-filter, amber bottom border */
 .header ul {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* background-color: #fff; */
-}
-.grey-color {
-  color: #868e96;
 }
 
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  /* color: black; */
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  /* background-color: #A6E1FA; */
-}
-
+/* ---- Logo ---- */
 .header .logo {
   display: block;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.25rem;
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  letter-spacing: 0.05em;
+  transition: var(--transition-fast);
 }
+
+.header .logo:hover {
+  filter: drop-shadow(0 0 8px var(--cyber-amber));
+}
+
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  padding: 0 10px;
-  /* color: #55198b; */
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 0 8px;
+  color: var(--cyber-amber) !important;
+  animation: flicker 8s infinite;
 }
 
-/* menu */
+/* Bracket characters around logo */
+.header .logo span:not(.logo-name) {
+  color: var(--cyber-cyan) !important;
+  font-family: var(--font-mono);
+  opacity: 0.8;
+}
 
+/* ---- Menu items ---- */
 .menu {
-  font-family: "Google Sans Regular";
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
 }
 
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.25s ease-out;
 }
 
-/* menu icon */
+.header li a {
+  display: block;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  color: var(--cyber-text-muted) !important;
+  transition: color 0.2s ease;
+}
 
+/* Neon underline slide-in on hover */
+.header li a::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: var(--cyber-amber);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.header li a:hover::after {
+  transform: scaleX(1);
+  box-shadow: var(--glow-amber-sm);
+}
+
+.header li a:hover {
+  color: var(--cyber-amber) !important;
+  background-color: transparent !important;
+}
+
+/* Active state */
+.header li a.active-link {
+  color: var(--cyber-amber) !important;
+}
+
+/* ---- Hamburger Icon ---- */
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 26px 20px;
   position: relative;
   user-select: none;
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: var(--cyber-amber);
   display: block;
   height: 2px;
   position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
+  transition: background 0.2s ease-out, box-shadow 0.2s ease;
+  width: 20px;
+  box-shadow: var(--glow-amber-sm);
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: var(--cyber-amber);
   content: "";
   display: block;
   height: 100%;
@@ -89,25 +137,25 @@
 }
 
 .header .menu-icon .navicon:before {
-  top: 5px;
+  top: 6px;
 }
 
 .header .menu-icon .navicon:after {
-  top: -5px;
+  top: -6px;
 }
 
-/* menu btn */
-
+/* ---- Menu toggle checkbox ---- */
 .header .menu-btn {
   display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 370px;
+  max-height: 400px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
+  box-shadow: none;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
@@ -123,21 +171,37 @@
   top: 0;
 }
 
-/* 69em = 1104px */
-
+/* ---- Desktop layout ---- */
 @media (min-width: 69em) {
   .header li {
     float: left;
   }
+
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .header .menu {
     max-height: none;
   }
+
   .header .menu-icon {
     display: none;
   }
+}
+
+/* ---- Mobile nav background ---- */
+@media (max-width: 69em) {
+  .header .menu {
+    background: rgba(13, 14, 18, 0.97);
+    border-bottom: 1px solid var(--cyber-border);
+    backdrop-filter: blur(16px);
+  }
+}
+
+/* Utility color class */
+.grey-color {
+  color: var(--cyber-text-muted);
 }

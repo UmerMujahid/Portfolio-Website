@@ -1,28 +1,45 @@
 import React, { Component } from "react";
 import "./OrganizationList.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Fade } from "react-reveal";
 
 const getOrgLogo = (login) => {
   const name = login.toLowerCase();
   try {
     if (name.includes("fast")) {
-      return require("../../assets/images/fast_nuces.png");
+      return {
+        src: require("../../assets/images/fast_nuces.png"),
+        dark: false,
+      };
     }
     if (name.includes("google")) {
-      return require("../../assets/images/google_logo.png");
+      return {
+        src: require("../../assets/images/google_logo.png"),
+        dark: false,
+      };
     }
     if (name.includes("github")) {
-      return require("../../assets/images/github_logo.png");
+      return {
+        src: require("../../assets/images/github_logo.png"),
+        dark: true,
+      };
     }
     if (name.includes("microsoft")) {
-      return require("../../assets/images/microsoft_logo.png");
+      return {
+        src: require("../../assets/images/microsoft_logo.png"),
+        dark: false,
+      };
     }
     if (name.includes("coursera")) {
-      return require("../../assets/images/coursera_logo.png");
+      return {
+        src: require("../../assets/images/coursera_logo.png"),
+        dark: false,
+      };
     }
     if (name.includes("kaggle")) {
-      return "https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg";
+      return {
+        src: "https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg",
+        dark: false,
+      };
     }
   } catch (e) {
     console.error("Error loading local logo:", e);
@@ -36,7 +53,9 @@ class OrganizationList extends Component {
       <div className="organizations-main-div">
         <ul className="dev-icons-orgs">
           {this.props.logos.map((logo) => {
-            const logoSrc = getOrgLogo(logo["login"]) || logo["avatarUrl"];
+            const logoData = getOrgLogo(logo["login"]);
+            const logoSrc = logoData ? logoData.src : logo["avatarUrl"];
+            const isDark = logoData ? logoData.dark : false;
             return (
               <OverlayTrigger
                 key={logo["login"]}
@@ -49,13 +68,13 @@ class OrganizationList extends Component {
                 }
               >
                 <li className="organizations-inline" name={logo["login"]}>
-                  <Fade bottom duration={2000} distance="40px">
-                    <img
-                      className="organizations-img"
-                      src={logoSrc}
-                      alt={logo["login"]}
-                    />
-                  </Fade>
+                  <img
+                    className={`organizations-img${
+                      isDark ? " org-logo-dark" : ""
+                    }`}
+                    src={logoSrc}
+                    alt={logo["login"]}
+                  />
                 </li>
               </OverlayTrigger>
             );

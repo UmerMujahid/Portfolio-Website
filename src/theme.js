@@ -1,4 +1,20 @@
 // theme.js
+
+// === NEO-BRUTALIST CYBER-TACTILE THEME ===
+export const cyberTheme = {
+  body: "#0d0e12",
+  text: "#e8eaf2",
+  expTxtColor: "#c8cad4",
+  highlight: "rgba(255, 176, 0, 0.12)",
+  dark: "#060709",
+  secondaryText: "#7a8099",
+  imageHighlight: "#ffb000",
+  compImgHighlight: "#181b24",
+  jacketColor: "#00f0ff",
+  headerColor: "rgba(13, 14, 18, 0.85)",
+  splashBg: "#0d0e12",
+};
+
 export const blueTheme = {
   body: "#EDF9FE",
   text: "#001C55",
@@ -209,4 +225,4 @@ export const modernDarkTheme = {
   splashBg: "#0f172a",
 };
 
-export const chosenTheme = blueTheme;
+export const chosenTheme = cyberTheme;

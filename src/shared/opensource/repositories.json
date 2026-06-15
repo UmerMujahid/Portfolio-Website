@@ -1,11 +1,100 @@
 {
   "data": [
     {
+      "id": "R_kgDOSO_5vQ",
+      "name": "UmerMujahid",
+      "createdAt": "2026-04-28T14:58:13Z",
+      "url": "https://github.com/UmerMujahid/UmerMujahid",
+      "description": null,
+      "isFork": false,
+      "languages": {
+        "nodes": []
+      }
+    },
+    {
+      "id": "R_kgDOS7OG9w",
+      "name": "Decode-Labs-Project-3",
+      "createdAt": "2026-06-15T10:45:01Z",
+      "url": "https://github.com/UmerMujahid/Decode-Labs-Project-3",
+      "description": "Built a Tech Recommendation system based on user preferences using NLP, TF-IDF, Cosine Similarity  as part of my virtual internship ( Summer 2026 ).",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "Python"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOS5mqUg",
+      "name": "Decode-Labs-Project-2",
+      "createdAt": "2026-06-13T12:47:35Z",
+      "url": "https://github.com/UmerMujahid/Decode-Labs-Project-2",
+      "description": "Built a simple KNN classifier using Python, Numpy, MatplotLib, open source dataset as part of my virtual internship ( Summer 2026 ).",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Python"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOS5i1wA",
+      "name": "Decode-Labs-Project-1",
+      "createdAt": "2026-06-13T11:18:05Z",
+      "url": "https://github.com/UmerMujahid/Decode-Labs-Project-1",
+      "description": "Built a basic intent based chatgpt using a global database of intent and responses using if-else statements  as part of my virtual internship ( Summer 2026 ).",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Python"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R_kgDOSj-pFg",
+      "name": "Portfolio-Website",
+      "createdAt": "2026-05-21T13:06:58Z",
+      "url": "https://github.com/UmerMujahid/Portfolio-Website",
+      "description": "I used an open source template to made by personal portfolio website currently live on umer-mujahid.vercel.app. Feel free to reach out and make your own.",
+      "isFork": false,
+      "languages": {
+        "nodes": [
+          {
+            "name": "Dockerfile"
+          },
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "HTML"
+          },
+          {
+            "name": "PowerShell"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "SCSS"
+          }
+        ]
+      }
+    },
+    {
       "id": "R_kgDOSfQg3Q",
       "name": "Github-Dev-Card-Generator",
       "createdAt": "2026-05-16T14:00:37Z",
       "url": "https://github.com/UmerMujahid/Github-Dev-Card-Generator",
-      "description": null,
+      "description": "I made a Github Dev Card Generator which generates high profile aesthetic summary card based on your profile using React Frontend and Python Backend. Used Gemini 2.5 flash model for LLM integration, MCP server for github extraction and will deploy it on vercel.",
       "isFork": false,
       "languages": {
         "nodes": [
@@ -55,17 +144,6 @@
             "name": "HTML"
           }
         ]
-      }
-    },
-    {
-      "id": "R_kgDOSO_5vQ",
-      "name": "UmerMujahid",
-      "createdAt": "2026-04-28T14:58:13Z",
-      "url": "https://github.com/UmerMujahid/UmerMujahid",
-      "description": null,
-      "isFork": false,
-      "languages": {
-        "nodes": []
       }
     },
     {
@@ -151,24 +229,6 @@
           },
           {
             "name": "CSS"
-          }
-        ]
-      }
-    },
-    {
-      "id": "R_kgDORJHgQA",
-      "name": "Resume-Website",
-      "createdAt": "2026-02-05T08:45:53Z",
-      "url": "https://github.com/UmerMujahid/Resume-Website",
-      "description": "Personal CV website using HTML and CSS",
-      "isFork": false,
-      "languages": {
-        "nodes": [
-          {
-            "name": "CSS"
-          },
-          {
-            "name": "HTML"
           }
         ]
       }

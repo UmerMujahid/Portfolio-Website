@@ -1,18 +1,26 @@
 import React from "react";
 import "./Footer.css";
-import { Fade } from "react-reveal";
+
 import { greeting } from "../../portfolio.js";
 /* eslint-disable jsx-a11y/accessible-emoji */
 
 export default function Footer(props) {
   return (
     <div className="footer-div">
-      <Fade>
-        <p className="footer-text" style={{ color: props.theme.secondaryText }}>
-          Made with <span role="img">❤️</span> by {greeting.title}
+      <div className="footer-content">
+        <p
+          className="footer-text-left"
+          style={{ color: props.theme.secondaryText }}
+        >
+          © {new Date().getFullYear()} All Rights Reserved.
         </p>
-        {/* <ToggleSwitch theme={props.theme} onToggle={props.onToggle}/> */}
-      </Fade>
+        <p
+          className="footer-text-right"
+          style={{ color: props.theme.secondaryText }}
+        >
+          {greeting.title}
+        </p>
+      </div>
     </div>
   );
 }

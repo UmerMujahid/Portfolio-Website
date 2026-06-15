@@ -1,85 +1,175 @@
+/* ============================================
+   SKILLS SECTION — CYBER THEME
+   ============================================ */
+
 .skills-main-div {
   display: flex;
-  overflow: hidden;
-}
-
-.skills-header {
-  font-size: 60px;
-  line-height: normal;
-  font-family: "Google Sans Regular";
-  text-align: center;
-}
-
-.skills-text {
-  font-size: 20px;
-}
-
-.skills-text-div {
-  margin-left: 50px;
-  font-family: "Google Sans Regular";
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 40px;
+  padding: 0 10px;
 }
 
 .skills-main-div > * {
-  flex: 1;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+}
+
+/* ---- Section heading ---- */
+.skills-header-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-header {
+  font-size: 52px;
+  line-height: 1.1;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-align: center;
+  color: var(--cyber-amber) !important;
+  text-shadow: 0 0 30px rgba(255, 176, 0, 0.2);
+  letter-spacing: -0.02em;
+  margin-bottom: 48px;
+}
+
+/* ---- Skill card heading ---- */
+.skills-heading {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  line-height: 1.1;
+  color: var(--cyber-amber) !important;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ---- SVG illustration side — smaller ---- */
+.skills-image-div {
+  flex: 0 0 28%;
+  max-width: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
 }
 
 .skills-image-div > * {
   max-width: 100%;
   height: auto;
-  margin-top: 100px;
+  filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.15));
 }
 
-.skills-heading {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Regular";
-  line-height: normal;
+/* ---- Text / card side ---- */
+.skills-text-div {
+  flex: 1;
+  min-width: 0;
 }
 
-/* Media Query */
+/* === SKILL BOX CARD — matches repo card style === */
+.skills-card {
+  background: rgba(17, 19, 24, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--cyber-border);
+  border-left: 3px solid var(--cyber-amber);
+  border-radius: 8px;
+  padding: 24px 28px;
+  position: relative;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(255, 176, 0, 0.02);
+}
+
+/* Removed top-left corner yellow arrow */
+
+.skills-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.5);
+  border-right: 2px solid rgba(0, 240, 255, 0.5);
+  pointer-events: none;
+}
+
+.skills-card:hover {
+  border-color: rgba(255, 176, 0, 0.4);
+  border-left-color: var(--cyber-amber);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 176, 0, 0.15);
+}
+
+/* ---- Skill text ---- */
+.skills-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--cyber-text-muted) !important;
+  margin: 4px 0;
+}
+
+.skills-text-subtitle {
+  font-size: 15px;
+  color: var(--cyber-text-muted);
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 1380px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: 26px;
   }
   .skills-header {
-    font-size: 50px;
+    font-size: 44px;
   }
-  /* .skills-image-div > img {
-    margin-top: 0px;
-  } */
 }
-@media (max-width: 768px) {
-  .skills-heading {
-    font-size: 30px;
-    text-align: center;
-  }
-  .skills-header {
-    font-size: 30px;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-  }
+
+@media (max-width: 900px) {
   .skills-main-div {
-    flex-direction: column;
-  }
-  .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
-  }
-  .skills-text {
-    font-size: 16px;
-  }
-  .skills-text-subtitle {
-    font-size: 16px;
-    text-align: center;
+    gap: 28px;
   }
   .skills-image-div {
-    /* display: none; */
-    order: 2;
+    flex: 0 0 32%;
+    max-width: 32%;
   }
-  .skills-image-div > * {
-    margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+  .skills-header {
+    font-size: 28px;
+  }
+
+  .skills-main-div {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 24px;
+  }
+
+  /* Hide SVG on mobile to save space */
+  .skills-image-div {
+    flex: none;
+    max-width: 100%;
+    display: none;
+  }
+
+  .skills-text-div {
+    width: 100%;
+  }
+
+  .skills-card {
+    padding: 18px 16px;
+  }
+
+  .skills-text {
+    font-size: 13px;
+  }
+  .skills-text-subtitle {
+    font-size: 13px;
   }
 }

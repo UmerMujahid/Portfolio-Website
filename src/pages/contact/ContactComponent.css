@@ -1,3 +1,7 @@
+/* ============================================
+   CONTACT PAGE — CYBER THEME
+   ============================================ */
+
 .contact-main {
   width: 100%;
 }
@@ -7,10 +11,8 @@
   margin-right: 5%;
 }
 
-.contact-heading-div {
-  display: flex;
-}
-
+/* ---- Section layout divs ---- */
+.contact-heading-div,
 .blog-heading-div {
   display: flex;
 }
@@ -20,138 +22,148 @@
   margin-top: 80px;
 }
 
-.blog-heading-div > * {
-  flex: 1;
-}
-
-.contact-heading-div > * {
-  flex: 1;
-}
-
+.contact-heading-div > *,
+.blog-heading-div > *,
 .address-heading-div > * {
   flex: 1;
 }
 
-.contact-heading-img-div {
+.contact-heading-img-div,
+.blog-heading-img-div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.blog-heading-img-div {
-  align-items: center;
-  justify-content: center;
+.contact-heading-img-div > *,
+.blog-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 176, 0, 0.15));
 }
 
-.contact-heading-text-div {
-  text-align: center;
-}
-
-.blog-heading-text-div {
-  text-align: center;
-}
-
+.contact-heading-text-div,
+.blog-heading-text-div,
 .address-heading-text-div {
   text-align: center;
 }
 
-.contact-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.blog-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
+/* ---- Headings ---- */
+.contact-heading-text,
+.blog-heading-text {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  line-height: 1.1;
+  text-align: center;
+  color: var(--cyber-amber);
+  text-shadow: 0 0 30px rgba(255, 176, 0, 0.2);
 }
 
 .contact-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
   margin-top: 60px;
 }
 
+/* Center social media icons specifically on contact page */
+.contact-heading-text-div .social-media-div {
+  justify-content: center;
+}
+
 .blog-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
   margin-top: 40px;
 }
 
 .address-heading-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
+  font-size: 24px;
+  font-family: var(--font-mono);
   text-align: center;
   margin-bottom: 10px;
+  color: var(--cyber-cyan);
+  opacity: 0.8;
+  letter-spacing: 0.06em;
 }
 
-.contact-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
+/* ---- Body text ---- */
+.contact-header-detail-text,
 .blog-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 0;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-family: var(--font-body);
+  color: var(--cyber-text-muted);
 }
 
-.resume-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.blogsite-btn-div {
+/* ---- Button wrappers ---- */
+.resume-btn-div,
+.blogsite-btn-div,
+.address-btn-div {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .address-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
   margin-top: 0;
 }
 
+/* ---- Profile image — cyber ring ---- */
+.profile-image-frame {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid var(--cyber-amber);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px rgba(255, 176, 0, 0.1), 0 0 30px rgba(255, 176, 0, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-slow);
+  animation: amber_pulse 3s ease-in-out infinite;
+}
+
+.profile-image-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50%;
+  transition: opacity 0.4s ease;
+}
+
+.profile-image-frame:hover {
+  border-color: var(--cyber-cyan);
+  box-shadow: 0 0 0 6px rgba(0, 240, 255, 0.12),
+    0 0 30px rgba(0, 240, 255, 0.25), 0 16px 48px rgba(0, 0, 0, 0.6);
+  animation: none;
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 1380px) {
   .contact-heading-text {
-    font-size: 50px;
+    font-size: 44px;
     margin-top: 60px;
   }
-
   .blog-heading-text {
-    font-size: 50px;
+    font-size: 44px;
     margin-top: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .contact-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 28px;
+    margin-top: 0;
   }
-
   .blog-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 28px;
+    margin-top: 0;
   }
-
   .address-heading-text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .blog-heading-div {
@@ -164,10 +176,7 @@
     margin-top: 60px;
   }
 
-  .blog-heading-text-div {
-    margin-top: 40px;
-  }
-
+  .blog-heading-text-div,
   .address-heading-text-div {
     margin-top: 40px;
   }
@@ -176,54 +185,15 @@
     flex-direction: column;
   }
 
-  .contact-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
-  }
-
+  .contact-header-detail-text,
   .blog-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 0;
     line-height: normal;
     text-align: center;
   }
-}
 
-.profile-image-frame {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 5px solid;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.profile-image-frame img {
-  width: 90% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  /* Fills the circle perfectly and naturally */
-  transition: transform 0.4s ease;
-}
-
-.profile-image-frame:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-}
-
-.profile-image-frame:hover img {
-  transform: scale(1.08);
-}
-
-@media (max-width: 768px) {
   .profile-image-frame {
     width: 220px !important;
     height: 220px !important;

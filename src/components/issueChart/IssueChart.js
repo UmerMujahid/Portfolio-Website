@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Fade } from "react-reveal";
+
 import "./IssueChart.css";
 import IssueData from "../../shared/opensource/issues.json";
 
@@ -11,17 +11,24 @@ class IssueChart extends Component {
       datasets: [
         {
           data: [IssueData["open"], IssueData["closed"]],
-          backgroundColor: ["#28a745", "#d73a49"],
-          hoverBackgroundColor: ["#28a745dd", "#d73a49dd"],
+          backgroundColor: [
+            "rgba(0, 240, 255, 0.4)" /* Open - Cyber Cyan */,
+            "rgba(245, 95, 68, 0.4)" /* Closed - Red/Orange */,
+          ],
+          hoverBackgroundColor: [
+            "rgba(0, 240, 255, 0.8)",
+            "rgba(245, 95, 68, 0.8)",
+          ],
+          borderColor: ["#00f0ff", "#f55f44"],
+          borderWidth: 2,
         },
       ],
     };
 
     return (
       <div className="issue-chart">
-        <Fade bottom duration={2000} distance="20px">
-          <h2 className="issue-chart-header">Issue Distribution</h2>
-        </Fade>
+        <h2 className="issue-chart-header">Issue Distribution</h2>
+
         <Doughnut
           data={data}
           options={{

@@ -1,23 +1,75 @@
+/* ============================================
+   COMPETITIVE SITES ICONS — CYBER THEME
+   (Education page profile links: GitHub, LinkedIn, Kaggle)
+   ============================================ */
+
+.competitive-sites-main-div {
+  margin-top: 16px;
+}
+
 .dev-icons {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .competitive-sites-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-family: "Google Sans Regular";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  transition: all 0.25s ease;
 }
 
+.competitive-sites-inline a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(30, 33, 48, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.competitive-sites-inline a:hover {
+  background: rgba(0, 240, 255, 0.1);
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Iconify span — force visible color */
+.competitive-sites-inline .iconify {
+  font-size: 1.8rem;
+  color: var(--cyber-text-muted) !important;
+  transition: color 0.22s ease, filter 0.22s ease;
+  filter: brightness(1.4);
+}
+
+.competitive-sites-inline a:hover .iconify {
+  color: var(--cyber-cyan) !important;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.5)) brightness(1.8);
+}
+
+/* Fallback i tags */
 .competitive-sites-inline > i {
-  color: #868e96;
+  color: var(--cyber-text-muted);
+  transition: color 0.22s ease;
+  font-size: 1.6rem;
 }
 
-.competitive-sites-inline > i:hover {
-  color: #645beb;
+.competitive-sites-inline:hover > i {
+  color: var(--cyber-cyan);
 }

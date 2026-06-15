@@ -1,51 +1,58 @@
 import React, { Component } from "react";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.js";
 import "./ExperienceAccordion.css";
-import { Accordion, Panel } from "baseui/accordion";
 
 class ExperienceAccordion extends Component {
   render() {
     const theme = this.props.theme;
     return (
       <div className="experience-accord">
-        <Accordion>
+        <div>
           {this.props.sections.map((section) => {
             return (
-              <Panel
+              <div
                 className="accord-panel"
-                title={section["title"]}
                 key={section["title"]}
-                overrides={{
-                  Header: {
-                    style: () => ({
-                      backgroundColor: `${theme.body}`,
-                      border: `1px solid`,
-                      borderRadius: `5px`,
-                      borderColor: `${theme.headerColor}`,
-                      marginBottom: `3px`,
-                      fontFamily: "Google Sans Regular",
-                      color: `${theme.text}`,
-                      ":hover": {
-                        color: `${theme.secondaryText}`,
-                      },
-                    }),
-                  },
-                  Content: {
-                    style: () => ({
-                      backgroundColor: `${theme.body}`,
-                    }),
-                  },
-                }}
+                style={{ marginBottom: "20px" }}
               >
-{section["experiences"].map((experience,index) => {
-                  return (
-                    <ExperienceCard index={index} totalCards={section["experiences"].length} experience={experience} theme={theme} />
-                  );
-                })}
-              </Panel>
+                <div
+                  style={{
+                    backgroundColor: theme.body,
+                    border: `1px solid ${theme.headerColor}`,
+                    borderRadius: "5px",
+                    marginBottom: "3px",
+                    fontFamily: "var(--font-mono)",
+                    color: theme.text,
+                    padding: "16px 24px",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {section["title"]}
+                </div>
+                <div
+                  style={{
+                    backgroundColor: theme.body,
+                    paddingTop: "4px",
+                    paddingBottom: "16px",
+                  }}
+                >
+                  {section["experiences"].map((experience, index) => {
+                    return (
+                      <ExperienceCard
+                        key={index}
+                        index={index}
+                        totalCards={section["experiences"].length}
+                        experience={experience}
+                        theme={theme}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
             );
           })}
-        </Accordion>
+        </div>
       </div>
     );
   }

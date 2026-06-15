@@ -7,10 +7,8 @@ import TopButton from "../../components/topButton/TopButton";
 import ArrowNavigation from "../../components/arrowNavigation/ArrowNavigation";
 import "./Opensource.css";
 
-// Import our custom repository list and metrics components
 import RepositoryList from "../../components/repositoryList/RepositoryList";
 import TopLanguages from "../../components/topLanguages/TopLanguages";
-import { Fade } from "react-reveal";
 
 class Opensource extends Component {
   render() {
@@ -21,14 +19,12 @@ class Opensource extends Component {
         <Organizations theme={theme} />
 
         <div className="opensource-dashboard-header">
-          <Fade bottom duration={2000} distance="20px">
-            <h1
-              className="opensource-dashboard-title"
-              style={{ color: theme.text }}
-            >
-              Contributions & Git Metrics
-            </h1>
-          </Fade>
+          <h1
+            className="opensource-dashboard-title"
+            style={{ color: theme.imageHighlight }}
+          >
+            Contributions &amp; Git Metrics
+          </h1>
         </div>
 
         <div className="opensource-grid-container">

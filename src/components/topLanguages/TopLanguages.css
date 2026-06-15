@@ -1,31 +1,56 @@
+/* ============================================
+   TOP LANGUAGES CARD — CYBER THEME
+   ============================================ */
+
 .top-languages-card {
   flex: 1;
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
-  margin: 15px;
-  transition: all 0.3s ease-in-out;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid var(--cyber-border-cyan);
+  background: rgba(17, 19, 24, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 240, 255, 0.04);
+  margin: 0;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Blueprint corner */
+.top-languages-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--cyber-cyan);
+  border-left: 2px solid var(--cyber-cyan);
+  pointer-events: none;
 }
 
 .top-languages-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 16px rgba(0, 240, 255, 0.1);
 }
 
 .languages-card-title {
-  font-size: 26px;
-  font-family: "Google Sans Bold";
-  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-bottom: 24px;
   text-align: left;
+  color: var(--cyber-amber);
+  letter-spacing: -0.01em;
 }
 
+/* ---- Language bars ---- */
 .languages-bar-container {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -43,27 +68,34 @@
 }
 
 .language-name {
-  font-size: 16px;
-  font-family: "Google Sans Medium";
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--cyber-text);
+  letter-spacing: 0.04em;
 }
 
 .language-percentage {
-  font-size: 14px;
-  font-family: "Google Sans Regular";
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--cyber-amber);
+  letter-spacing: 0.05em;
 }
 
 .progress-bg {
   width: 100%;
-  height: 10px;
-  border-radius: 5px;
+  height: 6px;
+  border-radius: 3px;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .progress-fill {
   height: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   animation: fillBar 1.5s cubic-bezier(0.1, 0.8, 0.25, 1) forwards;
   width: 0%;
+  /* Cyan glow on bars */
+  box-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
 }
 
 @keyframes fillBar {
@@ -72,13 +104,16 @@
   }
 }
 
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 768px) {
   .top-languages-card {
-    padding: 15px !important;
+    padding: 16px !important;
   }
   .languages-card-title {
-    font-size: 18px !important;
-    margin-bottom: 15px !important;
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
   }
   .languages-bar-container {
     gap: 12px;
@@ -87,12 +122,12 @@
     gap: 4px;
   }
   .language-name {
-    font-size: 14px;
-  }
-  .language-percentage {
     font-size: 12px;
   }
+  .language-percentage {
+    font-size: 11px;
+  }
   .progress-bg {
-    height: 8px;
+    height: 5px;
   }
 }

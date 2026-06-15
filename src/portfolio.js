@@ -2,7 +2,7 @@
 
 // Website related settings
 const settings = {
-  isSplash: true, // Change this to false if you don't want Splash screen.
+  isSplash: false, // Splash screen disabled as requested
 };
 
 //SEO Related settings
@@ -14,6 +14,7 @@ const seo = {
     title: "Umer Mujahid - Full Stack Developer & ML Engineer",
     type: "website",
     url: "https://umer-mujahid.vercel.app/",
+    image: "https://umer-mujahid.vercel.app/thumbnail.png",
   },
 };
 
@@ -94,14 +95,18 @@ const skills = {
           skillName: "TensorFlow",
           fontAwesomeClassname: "logos-tensorflow",
           style: {
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            padding: "4px",
+            borderRadius: "8px",
           },
         },
         {
           skillName: "PyTorch",
           fontAwesomeClassname: "logos-pytorch",
           style: {
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            padding: "4px",
+            borderRadius: "8px",
           },
         },
         {
@@ -235,7 +240,7 @@ const skills = {
           skillName: "GitHub",
           fontAwesomeClassname: "simple-icons:github",
           style: {
-            color: "#181717",
+            color: "#FFFFFF",
           },
         },
         {
@@ -247,9 +252,9 @@ const skills = {
         },
         {
           skillName: "VS Code",
-          fontAwesomeClassname: "simple-icons:visual-studio-code",
+          fontAwesomeClassname: "logos:visual-studio-code",
           style: {
-            color: "#007ACC",
+            backgroundColor: "transparent",
           },
         },
         {
@@ -459,6 +464,17 @@ const experience = {
           description:
             "Developed and managed website operations while implementing SEO best practices to optimize online presence. Worked on performance optimization and search engine visibility improvements.",
           color: "#4285F4",
+        },
+        {
+          title: "Intern - Artificial Intelligence",
+          company: "DecodeLabs",
+          company_url: "",
+          logo_path: "decode.png",
+          duration: "1st June 2026 - 1st July 2026",
+          location: "Remote | Summer Internship",
+          description:
+            "Collaborated on building various AI-driven solutions, including intelligent chatbots, personalized recommendation systems, and robust classification models. Leveraged modern machine learning frameworks to train and deploy these data-centric models effectively.",
+          color: "#F4B400",
         },
       ],
     },

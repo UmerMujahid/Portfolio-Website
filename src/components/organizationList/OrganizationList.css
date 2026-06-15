@@ -1,49 +1,99 @@
+/* ============================================
+   ORGANIZATION LIST — CYBER THEME
+   ============================================ */
+
 .dev-icons-orgs {
   padding-left: 0;
   list-style: none;
   font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 50px;
+  margin-bottom: 0;
+  margin-top: 40px;
   margin-left: 50px;
   margin-right: 50px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .organizations-img {
-  width: 75px;
+  width: 70px;
   height: auto;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(20%) brightness(0.85);
+  border-radius: 8px;
+  display: block;
+}
+
+/* Dark logos (GitHub black) get a light bg pill so they're visible on dark bg */
+.org-logo-dark {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 10px;
+  filter: none;
 }
 
 .organizations-inline {
-  display: inline-block;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  /* border: 1px solid #000000; */
-  font-family: "Google Sans Regular";
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 36px;
+  margin-bottom: 36px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--cyber-text-muted);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Holographic chip hover */
+.organizations-inline::before {
+  content: "";
+  position: absolute;
+  inset: -10px -14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.organizations-inline:hover::before {
+  background: rgba(0, 240, 255, 0.05);
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
 }
 
 .organizations-inline:hover {
-  -moz-transform: translate(0px, -5px);
-  -ms-transform: translate(0px, -5px);
-  -o-transform: translate(0px, -5px);
-  -webkit-transform: translate(0px, -5px);
-  transform: translate(0px, -5px);
+  transform: translateY(-6px);
+  color: var(--cyber-cyan);
 }
 
-@media (max-width: 1380px) {
+.organizations-inline:hover .organizations-img {
+  filter: grayscale(0%) brightness(1.15)
+    drop-shadow(0 0 8px rgba(0, 240, 255, 0.4));
 }
 
+.organizations-inline:hover .org-logo-dark {
+  filter: none;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 768px) {
   .organizations-img {
-    width: 50px;
+    width: 52px;
   }
-
   .dev-icons-orgs {
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 28px;
   }
-
   .organizations-inline {
     margin-right: 20px;
     margin-bottom: 20px;
@@ -52,17 +102,15 @@
 
 @media (max-width: 480px) {
   .organizations-img {
-    width: 42px;
+    width: 44px;
   }
-
   .dev-icons-orgs {
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 18px;
   }
-
   .organizations-inline {
-    margin-right: 12px;
-    margin-bottom: 12px;
+    margin-right: 14px;
+    margin-bottom: 14px;
   }
 }

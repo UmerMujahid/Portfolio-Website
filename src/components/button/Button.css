@@ -1,43 +1,106 @@
+/* ============================================
+   BUTTON — CYBER NEON STYLE
+   ============================================ */
+
 .main-button {
-  background-color: #55198b;
-  border: solid 1px #55198b;
-  color: white;
-  font-weight: 500;
-  line-height: 1.1;
+  /* Base */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  margin-top: 20px;
+  margin-right: 0;
   width: max-content;
-  padding: 13px 22px;
-  margin-right: 0px;
-  /* text-transform: uppercase; */
-  border-radius: 6px;
+
+  /* Cyber style */
+  background: transparent;
+  border: 1px solid var(--cyber-amber);
+  color: var(--cyber-amber);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 0; /* Fully boxy */
   text-align: center;
   text-decoration: none;
-  font-family: "Google Sans Regular";
-  display: block;
-  margin-top: 20px;
-  font-size: 18px;
   cursor: pointer;
-  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+
+  /* Transitions */
+  transition: var(--transition-normal);
+  box-shadow: var(--glow-amber-sm);
 }
+
+/* Shine sweep */
+.main-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 176, 0, 0.12),
+    transparent
+  );
+  transform: skewX(-15deg);
+  transition: left 0.45s ease;
+}
+
+.main-button:hover::before {
+  left: 140%;
+}
+
+/* Fill on hover */
 .main-button:hover {
-  /* background-color: #ffffff; */
-  /* color: black; */
-  transition: ease-in 0.3s;
+  background: rgba(255, 176, 0, 0.1);
+  color: var(--cyber-amber);
+  border-color: var(--cyber-amber);
+  box-shadow: var(--glow-amber-md);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
+
+.main-button:active {
+  transform: translateY(0);
+  box-shadow: var(--glow-amber-sm);
+}
+
+/* Corner clips for blueprint look */
+.main-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, transparent 50%, var(--cyber-amber) 50%);
+  opacity: 1;
+}
+
+/* ---- Project button wrapper ---- */
 .project-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-/* Media Query */
+
+/* ---- Media Queries ---- */
 @media (max-width: 768px) {
   .main-button {
-    font-size: 15px;
-    padding: 12px 18px;
-    margin-right: 0px;
+    font-size: 12px;
+    padding: 10px 20px;
+    letter-spacing: 0.08em;
   }
 }
+
 @media (max-width: 320px) {
   .main-button {
-    font-size: 12px;
+    font-size: 11px;
+    padding: 9px 16px;
   }
 }

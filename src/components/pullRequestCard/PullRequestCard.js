@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./PullRequestCard.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Fade } from "react-reveal";
 
 class PullRequestCard extends Component {
   render() {
@@ -11,21 +10,21 @@ class PullRequestCard extends Component {
     if (pullRequest["state"] === "OPEN") {
       iconPR = {
         iconifyClass: "octicon:git-pull-request",
-        style: { color: "#28a745" },
+        style: { color: "#00f0ff" } /* Cyber Cyan */,
       };
-      bgColor = "#dcffe4";
+      bgColor = "rgba(0, 240, 255, 0.08)";
     } else if (pullRequest["state"] === "MERGED") {
       iconPR = {
         iconifyClass: "octicon:git-merge",
-        style: { color: "#6f42c1" },
+        style: { color: "#ffb000" } /* Cyber Amber */,
       };
-      bgColor = "#f5f0ff";
+      bgColor = "rgba(255, 176, 0, 0.08)";
     } else {
       iconPR = {
         iconifyClass: "octicon:git-pull-request",
-        style: { color: "#d73a49" },
+        style: { color: "#f55f44" } /* Cyber Red */,
       };
-      bgColor = "#ffdce0";
+      bgColor = "rgba(245, 95, 68, 0.08)";
     }
 
     var subtitleString =
@@ -65,83 +64,81 @@ class PullRequestCard extends Component {
     }
 
     return (
-      <Fade bottom duration={2000} distance="40px">
-        <div
-          className="pull-request-card"
-          style={{
-            backgroundColor: bgColor,
-            border: `1px solid ${iconPR.style.color}`,
-          }}
-        >
-          <div className="pr-top">
-            <div className="pr-header">
-              <span
-                className="iconify pr-icons"
-                data-icon={iconPR.iconifyClass}
-                style={iconPR.style}
-                data-inline="false"
-              ></span>
-              <div className="pr-title-header">
-                <p className="pr-title">
-                  <a
-                    href={pullRequest["url"]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {pullRequest["title"]}
-                  </a>
-                </p>
-                <p className="pr-subtitle">{subtitleString}</p>
-              </div>
-            </div>
-            <div className="files-changed-header">
-              <p
-                className="files-changed-text"
-                style={{ backgroundColor: iconPR.style.color }}
-              >
-                {pullRequest["changedFiles"]}
-              </p>
-              <p className="files-changed-text-2">Files Changed</p>
-            </div>
-          </div>
-          <div className="pr-down">
-            <div className="changes-repo">
-              <p className="parent-repo">
-                Repository:{" "}
+      <div
+        className="pull-request-card"
+        style={{
+          backgroundColor: bgColor,
+          border: `1px solid ${iconPR.style.color}`,
+        }}
+      >
+        <div className="pr-top">
+          <div className="pr-header">
+            <span
+              className="iconify pr-icons"
+              data-icon={iconPR.iconifyClass}
+              style={iconPR.style}
+              data-inline="false"
+            ></span>
+            <div className="pr-title-header">
+              <p className="pr-title">
                 <a
-                  style={{ color: iconPR.style.color }}
-                  href={pullRequest["baseRepository"]["url"]}
+                  href={pullRequest["url"]}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {pullRequest["baseRepository"]["owner"]["login"]}/
-                  {pullRequest["baseRepository"]["name"]}
+                  {pullRequest["title"]}
                 </a>
               </p>
-              <div className="changes-files">
-                <p className="additions-files">
-                  <strong>{pullRequest["additions"]} + </strong>
-                </p>
-                <p className="deletions-files">
-                  <strong>{pullRequest["deletions"]} - </strong>
-                </p>
-                {mergedBy}
-              </div>
-            </div>
-            <div className="owner-img-div">
-              <a
-                href={pullRequest["baseRepository"]["owner"]["url"]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="owner-img"
-                  src={pullRequest["baseRepository"]["owner"]["avatarUrl"]}
-                  alt=""
-                />
-              </a>
+              <p className="pr-subtitle">{subtitleString}</p>
             </div>
           </div>
+          <div className="files-changed-header">
+            <p
+              className="files-changed-text"
+              style={{ backgroundColor: iconPR.style.color }}
+            >
+              {pullRequest["changedFiles"]}
+            </p>
+            <p className="files-changed-text-2">Files Changed</p>
+          </div>
         </div>
-      </Fade>
+        <div className="pr-down">
+          <div className="changes-repo">
+            <p className="parent-repo">
+              Repository:{" "}
+              <a
+                style={{ color: iconPR.style.color }}
+                href={pullRequest["baseRepository"]["url"]}
+              >
+                {pullRequest["baseRepository"]["owner"]["login"]}/
+                {pullRequest["baseRepository"]["name"]}
+              </a>
+            </p>
+            <div className="changes-files">
+              <p className="additions-files">
+                <strong>{pullRequest["additions"]} + </strong>
+              </p>
+              <p className="deletions-files">
+                <strong>{pullRequest["deletions"]} - </strong>
+              </p>
+              {mergedBy}
+            </div>
+          </div>
+          <div className="owner-img-div">
+            <a
+              href={pullRequest["baseRepository"]["owner"]["url"]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="owner-img"
+                src={pullRequest["baseRepository"]["owner"]["avatarUrl"]}
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     );
   }
 }

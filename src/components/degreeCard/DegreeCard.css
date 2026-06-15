@@ -1,42 +1,65 @@
+/* ============================================
+   DEGREE CARD — HOLOGRAPHIC DATA BLUEPRINT
+   ============================================ */
+
 .degree-card {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 16px 0;
 }
 
-.card-title {
-  font-family: "Google Sans Medium";
-  font-size: 23px;
-  /* color: #000000; */
-}
-
-.card-subtitle {
-  font-family: "Google Sans Medium";
-  font-size: 18px;
-  /* color: #000000; */
-  margin-top: 7px;
-  margin-bottom: 5px;
-}
-
+/* ---- Institution logo ---- */
 .card-img {
-  width: 200px;
-  height: auto;
+  width: 150px;
+  height: 150px; /* Fixed height to make it a perfect square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   padding: 10px;
-  border: 1px solid #d9dbdf;
-  /* background-color: #6c63ff; */
-  /* background: transparent; */
-  box-shadow: 5px 5px 5px #d9dbdf;
+  background: rgba(24, 27, 36, 0.8);
+  border: 2px solid var(--cyber-border-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15),
+    inset 0 0 20px rgba(0, 240, 255, 0.04);
+  transition: var(--transition-normal);
+  flex-shrink: 0;
 }
 
+.card-img:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.3),
+    inset 0 0 20px rgba(0, 240, 255, 0.08);
+  transform: scale(1.04);
+}
+
+/* ---- Card body ---- */
+.card-body {
+  background: rgba(17, 19, 24, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--cyber-border-cyan);
+  border-radius: 8px;
+  margin: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 240, 255, 0.05);
+  transition: var(--transition-normal);
+  flex: 1;
+  min-width: 0;
+}
+
+.card-body:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), var(--glow-cyan-sm);
+}
+
+/* ---- Header row ---- */
 .body-header {
-  max-width: inherit;
   display: flex;
-  /* width: 100%; */
-  /* background-color:#6c63ff99; */
-  border-radius: 7px 7px 0px 0px;
-  padding: 10px;
+  border-radius: 7px 7px 0 0;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--cyber-border-faint);
+  background: rgba(24, 27, 36, 0.5);
+  gap: 12px;
 }
 
 .body-header-title {
@@ -46,103 +69,123 @@
 
 .body-header-duration {
   width: 20%;
-}
-.duration {
-  font-family: "Google Sans Regular";
-  font-size: 16px;
-  /* color: #212121; */
-  padding-right: 10px;
-  float: right;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
+.card-title {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyber-amber);
+  letter-spacing: -0.01em;
+}
+
+.card-subtitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--cyber-cyan);
+  opacity: 0.8;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.duration {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--cyber-text-muted);
+  padding-right: 0;
+  float: right;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* ---- Content list ---- */
 .body-content {
-  max-width: inherit;
-  /* width: 100%; */
-  border-radius: 0px 0px 7px 7px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  /* box-shadow: 5px 5px 5px #d3d3d3; */
+  border-radius: 0 0 7px 7px;
+  padding: 12px 16px;
 }
 
 .content-list {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: "Google Sans Regular";
+  padding: 0 4px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--cyber-text-muted);
+  list-style: none;
 }
 
-.card-body {
-  /* background-color: #00FF00; */
-  border-bottom: 1px solid #d9dbdf;
-  border-left: 1px solid #d9dbdf;
-  border-right: 1px solid #d9dbdf;
-  border-radius: 7px;
-  margin: 10px;
-  box-shadow: 5px 5px 5px #d9dbdf;
+.content-list li::before {
+  content: "▸ ";
+  color: var(--cyber-amber);
+  font-size: 12px;
 }
 
+/* ---- Visit button ---- */
 .visit-btn {
-  /* background-color: #6c63ff99; */
   display: inline-block;
-  margin: 0px 10px 10px 0px;
-  padding: 10px;
-  border-radius: 7px;
-  border: 0px;
+  margin: 4px 12px 12px 0;
+  padding: 0;
+  border: 0;
   float: right;
-}
-
-.visit-btn:hover {
-  /* background-color:#6c63ffcc; */
+  background: transparent;
 }
 
 .btn {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Google Sans Regular";
-  /* color: #000000; */
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--cyber-cyan) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
 }
 
-@media (max-width: 1380px) {
+.btn:hover {
+  color: var(--cyber-amber) !important;
+  text-shadow: 0 0 8px rgba(255, 176, 0, 0.4);
 }
 
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 768px) {
   .degree-card {
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .body-header {
     flex-direction: column;
+    gap: 8px;
   }
 
   .body-header-title {
     width: 100%;
   }
-
   .body-header-duration {
-    padding: 0;
-    margin: 0;
     width: 100%;
+    justify-content: flex-start;
   }
-
   .duration {
-    padding: 0px;
-    margin: 0px;
-    float: left;
+    float: none;
+    padding: 0;
   }
 
   .card-img {
-    width: 200px;
+    width: 160px;
   }
-
   .card-body {
     width: 100% !important;
+    margin: 0;
   }
-
   .card-title {
-    font-size: 20px;
-  }
-
-  .card-subtitle {
     font-size: 16px;
+  }
+  .card-subtitle {
+    font-size: 13px;
   }
 }

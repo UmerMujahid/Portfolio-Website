@@ -1,3 +1,9 @@
+/* ============================================
+   NEO-BRUTALIST CYBER-TACTILE DESIGN SYSTEM
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @font-face {
   font-family: "Agustina Regular";
   font-style: normal;
@@ -40,34 +46,118 @@
   src: local("Google Sans Regular"),
     url("./assets/fonts/GoogleSans-Regular.ttf") format("woff");
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+  /* Core Palette */
+  --cyber-obsidian: #0d0e12;
+  --cyber-surface: #111318;
+  --cyber-surface-2: #181b24;
+  --cyber-surface-3: #1e2130;
+  --cyber-amber: #ffb000;
+  --cyber-amber-dim: rgba(255, 176, 0, 0.12);
+  --cyber-amber-glow: rgba(255, 176, 0, 0.3);
+  --cyber-cyan: #00f0ff;
+  --cyber-cyan-dim: rgba(0, 240, 255, 0.1);
+  --cyber-cyan-glow: rgba(0, 240, 255, 0.25);
+  --cyber-text: #e8eaf2;
+  --cyber-text-muted: #7a8099;
+  --cyber-text-faint: #3a3d50;
+  --cyber-border: rgba(255, 176, 0, 0.18);
+  --cyber-border-cyan: rgba(0, 240, 255, 0.18);
+  --cyber-border-faint: rgba(255, 255, 255, 0.06);
+
+  /* Glow Effects */
+  --glow-amber-sm: 0 0 8px rgba(255, 176, 0, 0.4);
+  --glow-amber-md: 0 0 16px rgba(255, 176, 0, 0.35),
+    0 0 32px rgba(255, 176, 0, 0.15);
+  --glow-amber-lg: 0 0 24px rgba(255, 176, 0, 0.5),
+    0 0 48px rgba(255, 176, 0, 0.2);
+  --glow-cyan-sm: 0 0 8px rgba(0, 240, 255, 0.4);
+  --glow-cyan-md: 0 0 16px rgba(0, 240, 255, 0.35),
+    0 0 32px rgba(0, 240, 255, 0.15);
+
+  /* Typography */
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-body: "Inter", "Google Sans Regular", -apple-system, sans-serif;
+
+  /* Scrollbar */
+  --scrollbar-color: #ffb000;
+
+  /* Transitions */
+  --transition-fast: all 0.18s ease;
+  --transition-normal: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* === SCROLLBAR === */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyber-amber) transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--cyber-amber);
+  border-radius: 4px;
+  opacity: 0.6;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-cyan);
+}
+
+/* === CODE FONT === */
+code {
+  font-family: var(--font-mono);
+}
+
+/* === BASE RESET & BODY === */
 html,
 body {
   scroll-behavior: smooth;
   overflow-x: clip;
 }
+
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  background-color: var(--cyber-obsidian);
+  color: var(--cyber-text);
+  font: 18px / 1.6 var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Retro grid background */
+  background-image: linear-gradient(
+      rgba(255, 176, 0, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 176, 0, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
 }
-/* Media Query */
+
+/* === SELECTION HIGHLIGHT === */
+::selection {
+  background: var(--cyber-amber-dim);
+  color: var(--cyber-amber);
+}
+
+/* === MEDIA QUERIES === */
 @media (max-width: 1380px) {
   html,
   body {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.5;
   }
 }
 
-:root {
-  --scrollbar-color: white; /* it will change when the page loads*/
-}
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-color) transparent;
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
 }

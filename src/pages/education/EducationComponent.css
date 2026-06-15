@@ -1,3 +1,7 @@
+/* ============================================
+   EDUCATION PAGE — CYBER THEME
+   ============================================ */
+
 .education-main {
   width: 100%;
 }
@@ -9,6 +13,7 @@
 
 .heading-div {
   display: flex;
+  align-items: center;
 }
 
 .heading-div > * {
@@ -21,50 +26,61 @@
   justify-content: center;
 }
 
+.heading-img-div > * {
+  max-width: 300px; /* Reduced from 100% to make the image much smaller */
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.15));
+}
+
 .heading-text-div {
   text-align: center;
 }
 
-.heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
+/* ---- Headings ---- */
 .heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-size: 26px; /* Matched to experience page */
+  font-weight: 700;
+  font-family: var(--font-mono);
   line-height: 1.1;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 0px;
+  color: var(--cyber-amber);
+  text-shadow: 0 0 30px rgba(255, 176, 0, 0.2);
+  letter-spacing: -0.02em;
 }
 
 .heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
+  font-size: 14px; /* Matched to experience page */
+  font-family: var(--font-mono);
   text-align: center;
+  color: var(--cyber-cyan);
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
 }
 
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
 @media (max-width: 1380px) {
   .heading-text {
-    font-size: 50px;
+    font-size: 44px;
     margin-top: 80px;
   }
   .heading-sub-text {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .heading-text {
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 20px;
   }
-
   .heading-sub-text {
-    font-size: 20px;
+    font-size: 17px;
   }
-
   .heading-div {
     flex-direction: column;
   }

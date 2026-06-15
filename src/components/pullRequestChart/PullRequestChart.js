@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Fade } from "react-reveal";
+
 import "./PullRequestChart.css";
 import PullRequestData from "../../shared/opensource/pull_requests.json";
 
@@ -15,17 +15,26 @@ class PullRequestChart extends Component {
             PullRequestData["merged"],
             PullRequestData["closed"],
           ],
-          backgroundColor: ["#28a745", "#6f42c1", "#d73a49"],
-          hoverBackgroundColor: ["#28a745dd", "#6f42c1dd", "#d73a49dd"],
+          backgroundColor: [
+            "rgba(0, 240, 255, 0.4)" /* Open - Cyber Cyan */,
+            "rgba(255, 176, 0, 0.4)" /* Merged - Cyber Amber */,
+            "rgba(245, 95, 68, 0.4)" /* Closed - Red/Orange */,
+          ],
+          hoverBackgroundColor: [
+            "rgba(0, 240, 255, 0.8)",
+            "rgba(255, 176, 0, 0.8)",
+            "rgba(245, 95, 68, 0.8)",
+          ],
+          borderColor: ["#00f0ff", "#ffb000", "#f55f44"],
+          borderWidth: 2,
         },
       ],
     };
 
     return (
       <div className="pr-chart">
-        <Fade bottom duration={2000} distance="20px">
-          <h2 className="pr-chart-header">Pull Request Distribution</h2>
-        </Fade>
+        <h2 className="pr-chart-header">Pull Request Distribution</h2>
+
         <Doughnut
           data={data}
           options={{
