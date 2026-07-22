@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import "./Resume.css";
-import myResumePdf from "../../assets/docs/AI_ML_Resume.pdf";
+import myResumePdf from "../../assets/docs/AI_Resume_2.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";

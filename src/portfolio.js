@@ -25,7 +25,7 @@ const greeting = {
   nickname: "Full Stack Developer & ML Engineer",
   subTitle:
     "Full Stack Developer & ML Engineer | Building intelligent products using Full stack development, ml models, llm, deployment etc. CS undergraduate at FAST-NUCES with passion for creating impactful products.",
-  resumeLink: "/AI_ML_Resume.pdf",
+  resumeLink: "/AI_Resume_2.pdf",
   portfolio_repository: "https://github.com/UmerMujahid",
   githubProfile: "https://github.com/UmerMujahid",
   profileImage: "compressed.jpeg",
